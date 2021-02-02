@@ -227,6 +227,7 @@ def ResNet(model_params, input_shape=None, input_tensor=None, include_top=True,
     conv_params = get_conv_params()
     init_filters = 64
 
+    print("Building custom resnet model")
     # resnet bottom
     x = layers.BatchNormalization(name='bn_data', **no_scale_bn_params)(img_input)
     x = layers.ZeroPadding2D(padding=(3, 3))(x)

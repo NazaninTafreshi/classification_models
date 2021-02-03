@@ -236,7 +236,7 @@ def ResNet(model_params, input_shape=None, input_tensor=None, include_top=True,
     x = layers.BatchNormalization(name='bn0', **bn_params)(x)
     x = layers.Activation('relu', name='relu0')(x)
     x = layers.ZeroPadding2D(padding=(1, 1))(x)
-    x = layers.MaxPooling2D((3, 3), strides=(2, 2), padding='valid', name='pooling0')(x)
+    # x = layers.MaxPooling2D((3, 3), strides=(2, 2), padding='valid', name='pooling0')(x)
 
     # resnet body
     for stage, rep in enumerate(model_params.repetitions):
